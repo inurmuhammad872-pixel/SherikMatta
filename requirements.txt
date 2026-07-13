@@ -9,6 +9,6 @@ pydantic
 pydantic-settings
 
 pyjwt
-pwdlib
+pwdlib[argon2]
 
 python-multipart
