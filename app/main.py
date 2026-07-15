@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from app.core.config import settings
-
+from app.modules.reference.brands.router import router as brand_router
 
 def create_app() -> FastAPI:
     app = FastAPI(
@@ -29,3 +29,4 @@ app = create_app()
 from app.modules.identity.routers.auth_router import router as auth_router
 
 app.include_router(auth_router)
+app.include_router(brand_router)
